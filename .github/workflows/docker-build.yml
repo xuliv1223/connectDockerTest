@@ -46,10 +46,9 @@ jobs:
           linux/arm64
           linux/arm
         push: true
-        # 指定用户/仓库名
+        # 指定用户/仓库名 ${{ secrets.DOCKER_USERNAME }}/flask-redis:${{ env.app_version }}
         tags: |
           ${{ secrets.DOCKER_USERNAME }}/flask-redis:1.0
-          # ${{ secrets.DOCKER_USERNAME }}/flask-redis:${{ env.app_version }}
     # 这里是通过md文件自动生成dockerhub描述的模块，也可以不需要
     - name: Docker Hub Description
       uses: peter-evans/dockerhub-description@v3
