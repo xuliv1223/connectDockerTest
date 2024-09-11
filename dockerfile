@@ -13,6 +13,6 @@ WORKDIR /src
 
 ENV FLASK_APP=app.py REDIS_HOST=redis
 
-EXPOSE 5000
+EXPOSE 5001
 
 CMD ["flask", "run", "-h", "0.0.0.0"]
